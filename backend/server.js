@@ -12,12 +12,12 @@ const app = express();
 app.use(express.json());
 const port = process.env.PORT || 3000;
 let primaryEmail = "";
-let secretkey = "izhanbhaikasecret";
-let refreshkey = "oneandonlyIzhankirefreshsecretkey";
+let secretkey = process.env.SECRET_KEY;
+let refreshkey = process.env.REFRESH;
 
 app.use(
   cors({
-    origin: "https://mern-fitness-app-one.vercel.app", // Your Vercel frontend URL
+    origin: "http://localhost:5173", // Changed to local React development server
     methods: "GET,POST,PUT,DELETE",
     credentials: true,
   })
@@ -25,7 +25,7 @@ app.use(
 
 mongoose
   .connect(
-    "mongodb+srv://izhanwaseem6:0d1P5WuAsnyKy4no@cluster0.j2hzs.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+    "mongodb://localhost:27017/fitness-app" // Changed to local MongoDB connection
   )
   .then(() => {
     console.log("Connected to Database");

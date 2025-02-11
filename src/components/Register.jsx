@@ -18,7 +18,7 @@ function Register() {
   const onSubmit = async (data) => {
     try {
       let response = await fetch(
-        "https://mern-fitness-app-production-e9fe.up.railway.app/register",
+        "http://localhost:3000/register",
         {
           method: "POST",
           headers: {

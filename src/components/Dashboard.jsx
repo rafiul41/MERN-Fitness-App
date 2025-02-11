@@ -42,7 +42,7 @@ const NutritionTracker = () => {
     try {
       const refreshToken = localStorage.getItem("refreshtoken");
       let response = await fetch(
-        "https://mern-fitness-app-production-e9fe.up.railway.app/refresh-token",
+        "http://localhost:3000/refresh-token",
         {
           method: "POST",
           headers: {
@@ -74,7 +74,7 @@ const NutritionTracker = () => {
       try {
         const token = localStorage.getItem("token");
         const response = await fetch(
-          "https://mern-fitness-app-production-e9fe.up.railway.app/getdata",
+          "http://localhost:3000/getdata",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -98,7 +98,7 @@ const NutritionTracker = () => {
       try {
         const token = localStorage.getItem("token");
         const response = await fetch(
-          "https://mern-fitness-app-production-e9fe.up.railway.app/getfood",
+          "http://localhost:3000/getfood",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -130,7 +130,7 @@ const NutritionTracker = () => {
         try {
           const token = localStorage.getItem("token");
           const response = await fetch(
-            "https://mern-fitness-app-production-e9fe.up.railway.app/getdata",
+            "http://localhost:3000/getdata",
             {
               headers: { Authorization: `Bearer ${token}` },
             }
@@ -442,7 +442,7 @@ const NutritionTracker = () => {
   useEffect(() => {
     const storeData = async () => {
       let response = await fetch(
-        "https://mern-fitness-app-production-e9fe.up.railway.app/store",
+        "http://localhost:3000/store",
         {
           method: "GET",
           headers: {
@@ -466,7 +466,7 @@ const NutritionTracker = () => {
     if (isFirstLoad) return;
     const storeData = async () => {
       await fetch(
-        "https://mern-fitness-app-production-e9fe.up.railway.app/store",
+        "http://localhost:3000/store",
         {
           method: "POST",
           headers: {

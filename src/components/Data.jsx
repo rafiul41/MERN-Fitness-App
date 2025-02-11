@@ -19,7 +19,7 @@ function Data() {
   const onSubmit = async (data) => {
     try {
       let response = await fetch(
-        "https://mern-fitness-app-production-e9fe.up.railway.app/data",
+        "http://localhost:3000/data",
         {
           method: "POST",
           headers: {

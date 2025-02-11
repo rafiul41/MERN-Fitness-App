@@ -10,7 +10,7 @@ function Musclegain() {
   const sendData = async () => {
     try {
       let response = await fetch(
-        "https://mern-fitness-app-production-e9fe.up.railway.app/mode",
+        "http://localhost:3000/mode",
         {
           method: "POST",
           headers: {
