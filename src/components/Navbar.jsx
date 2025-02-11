@@ -35,7 +35,7 @@ const Navbar = () => {
             setvisible2(true);
             setTimeout(() => {
               document.querySelector("#text").innerHTML =
-                "<p>Email: <span class='font-normal'>izhan3008@gmail.com</span></p><p>Contact No: <span class='font-normal'>+923486186394</span></p>";
+                "<p>Email: <span class='font-normal'>hello_world@yopmail.com</span></p><p>Contact No: <span class='font-normal'>+923486186394</span></p>";
             }, 0);
           }}
         >
